@@ -16,6 +16,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <form action="/registro" method="post">
                <!-- <img src="imagenes/Logo_interivalle.jpg" alt="Logo" width="250" height="100" class="imagen-redondeada">-->
                 <h1>Registro de usuarios</h1>
+              
+   <!-- Mostrar mensaje de error usando JavaScript -->
+    <input type="hidden" id="errorMessage" value="${error}" />
+
+    <div id="errorDiv" style="color:red; display:none;">
+        <p id="errorText"></p>
+    </div> 
                 
                 <div>
                     <label for="nombre_completo">Nombre Completo</label>

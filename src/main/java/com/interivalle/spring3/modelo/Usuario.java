@@ -5,6 +5,7 @@
 package com.interivalle.spring3.modelo;
 
 import jakarta.persistence.*;
+import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,10 +24,16 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id_usuario;
-
-    String nombre_completo;
+    
+    @Column(unique = true, nullable = false)
     String email;
+    
+    @Size(min = 6, message = "La contraseña debe tener mas de 6 caracteres")
+    String contrasena;
+    
+    String nombre_completo;
     String nombre_proyecto;
     String ciudad;
-    String contrasena;
+    
+    
 }

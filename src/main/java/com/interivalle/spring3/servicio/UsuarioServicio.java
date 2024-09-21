@@ -6,6 +6,7 @@ package com.interivalle.spring3.servicio;
 
 import com.interivalle.spring3.modelo.Usuario;
 import com.interivalle.spring3.repositorio.IUsuarioRepositorio;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,19 +22,13 @@ public class UsuarioServicio implements IUsuarioServicio{
 
     @Override
     public Usuario buscarUsuarioPorEmail(String email) {
-         Usuario usuario= usuarioRepositorio.findById(email).orElse(null);
-         return usuario;
+         Optional<Usuario> usuarioOpt = usuarioRepositorio.findByEmail(email);
+        return usuarioOpt.orElse(null);
     }
 
     @Override
     public Usuario guardarUsuario(Usuario usuario) {
         return usuarioRepositorio.save(usuario);
-    }
-
-
-
-
-
-   
+    }  
     
 }

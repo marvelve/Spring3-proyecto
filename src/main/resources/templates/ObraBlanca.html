@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Obra Blanca</title>
+</head>
+<body>
+    <h1>Cotización Obra Blanca</h1>
+    <h2>Ingrese medidas en cm</h2>
+    <form action="/obrablanca" method="post">
+        <label for="medida_area_privada">Medida Área Privada:</label>
+        <input type="text" id="medida_area_privada" name="medidaAreaPrivada" required><br><br>
+
+        <label for="medida_cocina">Medida Cocina:</label>
+        <input type="number" id="medida_cocina" name="medidaCocina" required><br><br>
+
+        <label for="medida_bano">Medida Baño:</label>
+        <input type="number" id="medida_bano" name="medidaBano" required><br><br>
+
+        <label for="medida_zona_oficios">Medida Zona de Oficios:</label>
+        <input type="number" id="medida_zona_oficios" name="medidaZonaOficios" ><br><br>
+
+        <label for="medida_salpicadero_cocina">Medida Salpicadero Cocina:</label>
+        <input type="number" id="medida_salpicadero_cocina" name="medidaSalpicaderoCocina" ><br><br>
+
+        <label for="cantidad_banos">Cantidad de Baños:</label>
+        <input type="number" id="cantidad_banos" name="cantidadBanos" required><br><br>
+
+        <label for="cantidad_poyos">Cantidad de Poyos:</label>
+        <input type="number" id="cantidad_poyos" name="cantidadPoyos"><br><br>
+
+        <label for="cantidad_panel">Cantidad de Paneles:</label>
+        <input type="number" id="cantidad_panel" name="cantidadPanel" ><br><br>
+
+        <label for="cantidad_muros">Cantidad de Muros:</label>
+        <input type="number" id="cantidad_muros" name="cantidadMuros" ><br><br>
+
+        <label for="cantidad_puntos_electricos">Cantidad de Puntos Eléctricos:</label>
+        <input type="number" id="cantidad_puntos_electricos" name="cantidadPuntosElectricos" ><br><br>
+
+        <button type="submit">Cotizar Madera</button>
+    </form>
+</body>
+</html>
