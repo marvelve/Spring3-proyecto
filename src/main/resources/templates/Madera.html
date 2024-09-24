@@ -10,6 +10,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>Cotizacion Madera</div>
+        <h1>Cotización Madera</h1>
+    <h2>Ingrese medidas en cm</h2>
+    <form action="/madera" method="post">
+        <label for="ancho_mueble_alto">Ancho Mueble Alto Cocina:</label>
+        <input type="text" id="ancho_mueble_alto" name="anchoMuebleAlto" required><br><br>
+
+        <label for="ancho_mueble_bajo">Ancho Mueble Bajo Cocina:</label>
+        <input type="text" id="ancho_mueble_bajo" name="anchoMuebleBajo" required><br><br>
+
+        <label for="ancho_mueble_bano">Ancho Mueble Baño:</label>
+        <input type="text" id="ancho_mueble_bano" name="anchoMuebleBano" required><br><br>
+
+        <label for="ancho_closet">Ancho Closet:</label>
+        <input type="text" id="ancho_closet" name="anchoCloset" ><br><br>
+
+        <label for="ancho_vestier">Ancho Vestier:</label>
+        <input type="text" id="ancho_vestier" name="anchoVestier" ><br><br>
+
+        <label for="cantidad_closet">Cantidad Closet:</label>
+        <input type="number" id="cantidad_closet" name="cantidadCloset"><br><br>
+
+        <label for="cantidad_puerta">Cantidad de Puertas:</label>
+        <input type="number" id="cantidad_puerta" name="cantidadPuertas" ><br><br>
+        
+        <label for="medida_puerta">Medida Puerta:</label>
+        <input type="text" id="medida_puerta" name="medidaPuertas" required><br><br>
+
+        <button type="submit">Cotizar</button>
+    </form>
+        
     </body>
 </html>
