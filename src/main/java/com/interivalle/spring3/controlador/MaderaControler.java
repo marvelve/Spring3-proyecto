@@ -32,7 +32,7 @@ public class MaderaControler {
 
     // Guardar en la base de datos si no hay errores
         maderaServicio.guardarMadera(madera);
-        return "Login";
+        return "Cotizacion";
     }
     
 }

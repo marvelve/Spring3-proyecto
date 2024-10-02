@@ -36,9 +36,9 @@ public class Madera {
     double anchoMuebleAlto;
     double anchoMuebleBajo;
     double anchoMuebleBano;
-    double anchoCloset;
-    double anchoVestier;
-    int cantidadCloset;
-    int cantidadPuertas;
-    double medidaPuertas;
+    double anchoCloset=0.0;
+    double anchoVestier=0.0;
+    int cantidadCloset=0;
+    int cantidadPuertas=0;
+    double medidaPuertas=0.0;
 }

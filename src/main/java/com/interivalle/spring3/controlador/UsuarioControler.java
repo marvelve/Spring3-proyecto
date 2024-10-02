@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.ui.Model;
 import java.util.*;
+import javax.validation.Valid;
+import org.springframework.validation.BindingResult;
 /**
  *
  * @author Marysela Velasco
@@ -33,8 +35,12 @@ public class UsuarioControler {
     }
     
    @PostMapping("/registro")
-    public String guardarUsuario(Usuario usuario) {
+    public String guardarUsuario(@Valid Usuario usuario, BindingResult result, Model model) {
    
+        if (result.hasErrors()) {
+            return "Registro";  // Si hay errores, vuelve al formulario
+        }
+        
         usuarioServicio.guardarUsuario(usuario);
         return "Login";
     }

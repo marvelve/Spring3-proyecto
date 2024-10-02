@@ -13,35 +13,35 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     <h1>Cotización Obra Blanca</h1>
     <h2>Ingrese medidas en cm</h2>
     <form action="/obrablanca" method="post">
-        <label for="medida_area_privada">Medida Área Privada:</label>
+        <label for="medida_area_privada">Medida Área Privada: *</label>
         <input type="text" id="medida_area_privada" name="medidaAreaPrivada" required><br><br>
 
-        <label for="medida_cocina">Medida Cocina:</label>
-        <input type="number" id="medida_cocina" name="medidaCocina" required><br><br>
+        <label for="medida_cocina">Medida Cocina: *</label>
+        <input type="text" id="medida_cocina" name="medidaCocina" required><br><br>
 
-        <label for="medida_bano">Medida Baño:</label>
-        <input type="number" id="medida_bano" name="medidaBano" required><br><br>
+        <label for="medida_bano">Medida Baño: *</label>
+        <input type="text" id="medida_bano" name="medidaBano" required><br><br>
 
         <label for="medida_zona_oficios">Medida Zona de Oficios:</label>
-        <input type="number" id="medida_zona_oficios" name="medidaZonaOficios" ><br><br>
+        <input type="text" id="medida_zona_oficios" name="medidaZonaOficios" min="0"><br><br>
 
         <label for="medida_salpicadero_cocina">Medida Salpicadero Cocina:</label>
-        <input type="number" id="medida_salpicadero_cocina" name="medidaSalpicaderoCocina" ><br><br>
+        <input type="text" id="medida_salpicadero_cocina" name="medidaSalpicaderoCocina" min="0" ><br><br>
 
-        <label for="cantidad_banos">Cantidad de Baños:</label>
+        <label for="cantidad_banos">Cantidad de Baños: *</label>
         <input type="number" id="cantidad_banos" name="cantidadBanos" required><br><br>
 
         <label for="cantidad_poyos">Cantidad de Poyos:</label>
-        <input type="number" id="cantidad_poyos" name="cantidadPoyos"><br><br>
+        <input type="number" id="cantidad_poyos" name="cantidadPoyos" min="0"><br><br>
 
         <label for="cantidad_panel">Cantidad de Paneles:</label>
-        <input type="number" id="cantidad_panel" name="cantidadPanel" ><br><br>
+        <input type="number" id="cantidad_panel" name="cantidadPanel" min="0"><br><br>
 
         <label for="cantidad_muros">Cantidad de Muros:</label>
-        <input type="number" id="cantidad_muros" name="cantidadMuros" ><br><br>
+        <input type="number" id="cantidad_muros" name="cantidadMuros" min="0"><br><br>
 
         <label for="cantidad_puntos_electricos">Cantidad de Puntos Eléctricos:</label>
-        <input type="number" id="cantidad_puntos_electricos" name="cantidadPuntosElectricos" ><br><br>
+        <input type="number" id="cantidad_puntos_electricos" name="cantidadPuntosElectricos" min="0"><br><br>
 
         <button type="submit">Cotizar Madera</button>
     </form>
