@@ -35,9 +35,7 @@ public class ObraBlanca {
     double medidaAreaPrivada;
     double medidaCocina;
     double medidaBano;
-    @DecimalMin(value = "0.0", inclusive = false, message = "La medida del área privada debe ser mayor que 0")
-    double medidaZonaOficios;
-    @DecimalMin(value = "0.0", inclusive = false, message = "La medida del área privada debe ser mayor que 0")
+    double medidaZonaOficios;  
     double medidaSalpicaderoCocina;
     int cantidadBanos;
     int cantidadPoyos=0;
