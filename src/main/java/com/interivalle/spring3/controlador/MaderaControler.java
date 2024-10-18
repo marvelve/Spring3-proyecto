@@ -7,32 +7,33 @@ package com.interivalle.spring3.controlador;
 import com.interivalle.spring3.modelo.Madera;
 import com.interivalle.spring3.servicio.IMaderaServicio;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  * @author Marysela Velasco
  */
- @Controller
+ @RestController
+ @CrossOrigin(origins = "http://localhost:3000")
 public class MaderaControler {
      @Autowired
     private IMaderaServicio maderaServicio;
      
-     
-     @GetMapping("/madera")  // Maneja la solicitud GET para mostrar el formulario
-    public String mostrarFormulario() {
-        return "Madera";  // El nombre de la vista (Registro.html) sin la extensión
-    }
     
-   @PostMapping("/madera")
-    public String guardaMadera(@ModelAttribute Madera madera) {
-
-    // Guardar en la base de datos si no hay errores
-        maderaServicio.guardarMadera(madera);
-        return "Cotizacion";
+   @PostMapping("/api/madera")
+    public ResponseEntity<String> guardarMadera(@RequestBody Madera madera) {
+        try {
+            // Guardar en la base de datos
+            maderaServicio.guardarMadera(madera);
+            return ResponseEntity.ok("Cotización de Madera guardada exitosamente");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al guardar la cotización");
+        }
     }
-    
 }
