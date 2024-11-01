@@ -5,6 +5,7 @@
 package com.interivalle.spring3.servicio;
 
 import com.interivalle.spring3.modelo.Usuario;
+import java.util.List;
 
 /**
  *
@@ -14,5 +15,6 @@ public interface IUsuarioServicio {
     
     public Usuario buscarUsuarioPorEmail(String email);
     public Usuario guardarUsuario(Usuario usuario);
+    public List<Usuario> listarUsuario();
     
 }

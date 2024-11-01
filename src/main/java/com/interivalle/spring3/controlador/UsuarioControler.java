@@ -16,6 +16,7 @@ import javax.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 /**
  *
  * @author Marysela Velasco
@@ -41,6 +42,12 @@ public class UsuarioControler {
 
         usuarioServicio.guardarUsuario(usuario);
         return ResponseEntity.ok("Usuario registrado correctamente");
+    }
+    
+     @GetMapping ("/api/usuarios")
+    public ResponseEntity<List<Usuario>> listarUsuario() {
+        List<Usuario> usuarios = usuarioServicio.listarUsuario();
+        return ResponseEntity.ok(usuarios);
     }
     
     

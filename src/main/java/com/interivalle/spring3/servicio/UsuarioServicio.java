@@ -6,6 +6,7 @@ package com.interivalle.spring3.servicio;
 
 import com.interivalle.spring3.modelo.Usuario;
 import com.interivalle.spring3.repositorio.IUsuarioRepositorio;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +30,11 @@ public class UsuarioServicio implements IUsuarioServicio{
     @Override
     public Usuario guardarUsuario(Usuario usuario) {
         return usuarioRepositorio.save(usuario);
-    }  
+    }
+    
+    @Override
+    public List<Usuario> listarUsuario() {
+        return usuarioRepositorio.findAll();
+    } 
     
 }
